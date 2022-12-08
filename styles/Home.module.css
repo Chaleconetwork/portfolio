@@ -10,8 +10,8 @@
     margin-bottom: 30px;
 }
 
-.container .letraGris {
-    color: gray !important;
+.container .letraColor {
+    color: #008BFF;
 }
 
 .seccion1 {
@@ -77,6 +77,8 @@
     background-color: transparent;
     border: 1px solid #008BFF;
     color: #fff;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .btnCv:hover {
@@ -150,5 +152,38 @@
 @keyframes skills5 {
     100% {
         width: 60%;
+    }
+}
+
+/* VERSION MOVIL */
+
+@media (min-width: 360px) and (max-width: 600px) {
+    .container {
+        padding-top: 100px;
+    }
+
+    .container h1 {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .btnContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .seccion1 {
+        height: 50vh;
+    }
+
+    .seccion2 {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .container {
+        padding-top: 100px;
     }
 }

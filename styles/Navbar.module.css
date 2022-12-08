@@ -5,6 +5,18 @@
     width: 100vw;
 }
 
+.navegacion i {
+    color: #008BFF;
+    font-size: 36px;
+    display: none;
+    padding: 8px;
+}
+
+.navegacion i:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
 .nav {
     display: flex;
     justify-content: center;
@@ -17,4 +29,15 @@
 
 .nav li:hover {
     background-color: #008BFF;
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+
+    .navegacion i {
+        display: flex;
+        justify-content: flex-end;
+    }
 }

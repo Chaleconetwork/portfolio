@@ -19,6 +19,7 @@ export default function Navbar() {
                     <li>Contactos</li>
                 </Link>
             </ul>
+            <i className="bi bi-list"></i>
         </nav>
     )
 }

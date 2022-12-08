@@ -5,17 +5,30 @@ import Skills from '../components/Skills'
 import Link from 'next/link'
 import { Fragment } from 'react'
 import Footer from '../components/Footer'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
+
 
 export default function Home() {
+
+    const { scrollYProgress } = useViewportScroll()
+    const scale = useTransform(scrollYProgress, [0, 1], [1, -2]);
+
     return (
         <Fragment>
             <div className={styles.container}>
-                <h1>
+                <motion.h1
+                    initial={{ scale: -1 }}
+                    animate={{ rotate: 0, scale: 1 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20
+                    }} style={{ scale }}>
                     Hola, <br />
                     Soy Chaleco, <br />
-                    <span className={styles.letraGris}>Programador .NET</span>
-                </h1>
-                <div className={styles.seccion1}>
+                    Programador<span className={styles.letraColor}> .NET</span>
+                </motion.h1>
+                <motion.div className={styles.seccion1} style={{ scale }}>
                     <p>
                         Programador desde 2019,
                     </p>
@@ -26,7 +39,7 @@ export default function Home() {
                     <div className={styles.btnContainer}>
                         <button className={styles.btnCv}>Ver CV</button>
                     </div>
-                </div>
+                </motion.div>
                 <div className={styles.seccion2}>
                     <h2>Habilidades y conocimientos</h2>
                     <div>
@@ -70,7 +83,14 @@ export default function Home() {
                 </div>
                 <div className={styles.seccion4}>
                     <h2>Contactos</h2>
-                    <div className={styles.contactos}>
+                    <motion.div className={styles.contactos} 
+                        initial={{ scale: 0 }}
+                        animate={{ rotate: 360, scale: 1 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 20
+                        }}>
                         <Link href='https://github.com/Chaleconetwork' target='_blank'>
                             <i className="bi bi-github"></i>
                         </Link>
@@ -80,7 +100,7 @@ export default function Home() {
                         <Link href='https://github.com/Chaleconetwork' target='_blank'>
                             <i className="bi bi-instagram"></i>
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <Footer />
