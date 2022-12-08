@@ -1,13 +1,12 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Fragment } from 'react'
-import Sidebar from '../components/Sidebar'
-import styles from '../styles/App.module.css'
+import Navbar from '../components/Navbar'
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <Fragment>
-            <Sidebar />
+            <Navbar />
             <Component {...pageProps} />
         </Fragment>
     )

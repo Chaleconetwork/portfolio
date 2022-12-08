@@ -1,0 +1,20 @@
+.navegacion {
+    /* background-color: #fff; */
+    border-bottom: 1px solid #008BFF;
+    position: fixed;
+    width: 100vw;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav li {
+    color: #fff;
+    padding: 20px;
+}
+
+.nav li:hover {
+    background-color: blueviolet;
+}
