@@ -5,12 +5,12 @@ import Skills from '../components/Skills'
 import Link from 'next/link'
 import { Fragment } from 'react'
 import Footer from '../components/Footer'
-import { motion, useTransform, useViewportScroll } from 'framer-motion'
+import { motion, useTransform, useScroll } from 'framer-motion'
 
 
 export default function Home() {
 
-    const { scrollYProgress } = useViewportScroll()
+    const { scrollYProgress } = useScroll()
     const scale = useTransform(scrollYProgress, [0, 1], [1, -2]);
 
     return (
