@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Skills from '../components/Skills'
 
 export default function Home() {
     return (
@@ -8,7 +9,7 @@ export default function Home() {
             <h1>
                 Hola, <br />
                 Soy Chaleco, <br />
-                Programador .NET 
+                Programador .NET
             </h1>
             <div className={styles.seccion1}>
                 <p>
@@ -16,11 +17,40 @@ export default function Home() {
                 </p>
                 <br />
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quis, sint quam similique aut delectus rem corporis ad fugit, distinctio iste laboriosam esse, cum ut? Cum error aspernatur natus pariatur culpa sint perspiciatis quo, expedita a eaque libero voluptatibus perferendis, ea voluptas magni laboriosam sequi dignissimos ipsum sed veritatis qui maxime. Dolor quae incidunt, quasi nihil soluta libero animi praesentium expedita accusamus tempora corporis recusandae dolorum officia totam pariatur facilis eius in voluptatem. Itaque debitis dicta perferendis molestias tenetur doloremque quidem at? Exercitationem totam quaerat temporibus, eaque eligendi itaque nostrum tempore illo sint voluptatibus accusantium nulla maiores officiis deserunt cupiditate.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia quidem ducimus adipisci quaerat qui eum accusamus temporibus. Velit nulla iure quo esse natus eaque facilis inventore, quos facere ullam placeat?
                 </p>
+                <div className={styles.btnContainer}>
+                    <button className={styles.btnCv}>Ver CV</button>
+                </div>
             </div>
             <div className={styles.seccion2}>
-                
+                <h2>Habilidades y conocimientos</h2>
+                <div>
+                    <div>
+                        <Skills name='Frontend | React js' percent={70} />
+                        <div className={styles.menu}>
+                            <div className={styles.barra1}></div>
+                        </div>
+                    </div>
+                    <div>
+                        <Skills name='Backend | C# .NET' percent={60} />
+                        <div className={styles.menu}>
+                            <div className={styles.barra2}></div>
+                        </div>
+                    </div>
+                    <div>
+                        <Skills name='Inglés' percent={60} />
+                        <div className={styles.menu}>
+                            <div className={styles.barra3}></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.seccion3}>
+                <h2>Proyectos</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit neque, esse animi voluptatem adipisci cum similique doloremque quibusdam consectetur officiis repellat, est aut sapiente ad ipsum soluta recusandae quaerat commodi.
+                </p>
             </div>
         </div>
     )
