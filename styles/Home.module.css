@@ -12,6 +12,7 @@
 
 .container .letraColor {
     color: #008BFF;
+    text-shadow: 1px 3px 4px #fff;
 }
 
 .seccion1 {
