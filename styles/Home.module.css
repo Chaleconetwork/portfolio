@@ -24,7 +24,7 @@
 .seccion2 {
     margin-top: 200px;
     margin-bottom: 120px;
-    height: 50vh;
+    height: 70vh;
     text-align: center;
     border-bottom: 1px solid #008BFF;
 }
@@ -34,16 +34,16 @@
     margin-bottom: 50px;
 }
 
-.seccion3 {
+.seccion3 {  /* proyectos */
     color: #fff;
-    /* margin-bottom: 50px; */
-    height: 50vh;
+    padding-top: 100px;
+    height: 90vh;
     border-bottom: 1px solid #008BFF;
     margin-bottom: 120px;
 }
 
 .seccion4 {
-    height: 50vh;
+    height: 60vh;
     border-bottom: 1px solid #008BFF;
     margin-bottom: 120px;
 }

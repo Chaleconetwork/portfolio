@@ -12,6 +12,7 @@ export default function Home() {
 
     const { scrollYProgress } = useScroll()
     const scale = useTransform(scrollYProgress, [0, 1], [1, -2]);
+    // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
 
     return (
         <Fragment>
@@ -43,7 +44,10 @@ export default function Home() {
                         <button className={styles.btnCv}>Ver CV</button>
                     </div>
                 </motion.div>
-                <div className={styles.seccion2}>
+                <div id='habilidades'></div>
+                <br />
+                <br />
+                <motion.div className={styles.seccion2}>
                     <h2>Habilidades y conocimientos</h2>
                     <div>
                         <div>
@@ -77,16 +81,18 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
+                <div id='proyectos'></div>
                 <div className={styles.seccion3}>
                     <h2>Proyectos</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit neque, esse animi voluptatem adipisci cum similique doloremque quibusdam consectetur officiis repellat, est aut sapiente ad ipsum soluta recusandae quaerat commodi.
                     </p>
                 </div>
+                <div id='contactos'></div>
                 <div className={styles.seccion4}>
                     <h2>Contactos</h2>
-                    <motion.div className={styles.contactos} 
+                    <motion.div className={styles.contactos}
                         initial={{ scale: 0 }}
                         animate={{ rotate: 360, scale: 1 }}
                         transition={{
