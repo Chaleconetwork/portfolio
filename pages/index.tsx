@@ -15,6 +15,9 @@ export default function Home() {
 
     return (
         <Fragment>
+            <Head>
+                <title>Chaleco - Portafolio</title>
+            </Head>
             <div className={styles.container}>
                 <motion.h1
                     initial={{ scale: -1 }}
